@@ -44,7 +44,7 @@
     --ink-15: rgba(25,23,19,0.15);
     --signal: #E53535;
     --tape-blue: #2A3EFF;
-    --measure-yello:#E53535;
+    --measure-yello:#ec5151;
   }
 
   * { box-sizing: border-box; }
@@ -250,27 +250,39 @@
     }
 
     header#top {
-      padding-top: 1.5rem;
+      padding-top: 1.25rem;
       padding-bottom: 1.5rem;
     }
 
     header#top h1 {
-      font-size: clamp(2.6rem, 15vw, 4rem);
-      line-height: 1.02;
-      max-width: min(100%, 23.5rem);
+      font-size: clamp(3rem, 14vw, 4.2rem);
+      line-height: 0.96;
+      max-width: min(100%, 20rem);
       margin: 0 auto;
       text-align: center;
       word-break: normal;
       overflow-wrap: normal;
+      letter-spacing: -0.03em;
     }
     header#top #stretchWord {
       white-space: nowrap;
       display: inline-block;
+      margin-top: 0.15rem;
     }
     header#top .hero-copy {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
+      max-width: 100%;
+    }
+    header#top .hero-copy p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    header#top .btn-primary {
+      margin-top: 1rem;
+      padding: 0.8rem 1.1rem;
+      font-size: 0.78rem;
     }
 
     @media (max-width: 520px) {
@@ -381,7 +393,7 @@
     <a href="#top" class="font-display text-lg md:text-xl tracking-tight flex items-baseline gap-2 normal-case">
       DreamHaus
     </a>
-    <a href="#registration-form" class="btn-primary">Reserve Your Seat</a>
+    <a href="#registration-form" class="btn-primary hidden md:inline-flex">Reserve Your Seat</a>
   </div>
 </nav>
 
@@ -389,18 +401,16 @@
 <header id="top" class="relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-16 flex flex-col items-center text-center md:items-center md:text-center">
     <h1 class="font-display text-[15vw] md:text-[8.5vw] leading-[0.95] reveal in normal-case w-full max-w-3xl">
-      6 hour<br>
-    </h1>
-    <h1 class="font-display text-[15vw] md:text-[8.5vw] leading-[0.95] reveal in normal-case w-full max-w-3xl">
-      design<br>
-      <span id="stretchWord" class="stretch-word ">STRETCH</span>
+      6-hour design<br>
+      <span id="stretchWord" class="stretch-word text-[var(--signal)]">STRETCH</span>
     </h1>
 
     <div class="mt-10 md:mt-14 w-full max-w-2xl grid md:grid-cols-12 gap-8 items-center justify-items-center">
       <p class="md:col-span-8 md:col-start-3 text-lg md:text-2xl leading-snug text-[var(--ink-70)] reveal in reveal-delay-1 mx-auto">
-        A <span class="hero-highlight">6-hour</span> intensive learning experience designed to help <span class="hero-highlight">junior and intermediate designers</span> accelerate their <span class="hero-highlight">design mastery</span>.
+        An intensive learning experience designed to help junior and intermediate designers accelerate their design mastery.
       </p>
     </div>
+    <a href="#registration-form" class="btn-primary">Reserve Your Seat</a>
   </div>
 </header>
 
